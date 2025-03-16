@@ -1,1 +1,1 @@
-web: gunicorn payease.wsgi --bind 0.0.0.0:$PORT
+web: gunicorn laborers/laborers.wsgi --bind 0.0.0.0:$PORT
