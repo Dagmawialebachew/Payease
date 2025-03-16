@@ -22,6 +22,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 
 # connect(db="payease", host=MONGODB_ATLAS_URI)
+import os
+
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DATABASE_URL = os.environ.get('DATABASE_URL')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 
 
 
