@@ -1,8 +1,10 @@
+
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/css/output.css">
+  <link rel="stylesheet" href="{% static 'css/output.css' %}">
   <title>Payease</title>
 </head>
 <body class="m-0 p-0 border-none outline-none box-border font-poppins bg-[#FAFBFF] ">
@@ -10,7 +12,7 @@
 <main class="flex gap-2 w-full flex-col">
 
   <div class="mb-2 px-4 py-2">
-    <img width="150" src="../static/logo/payease-bg-2.png">
+    <img width="150" src="{% static 'logo/payease-bg-2.png' %}">
   </div>
 
  <div class="main-content flex-1 relative bg-none w-full p-4">
@@ -18,11 +20,11 @@
 
   <div class="w-full grid grid-cols-3 gap-4 bg-white shadow-lg rounded-xl px-4 py-6 max-md:grid-cols-1 mb-4 max-md:place-items-baseline relative" >
 
-    <div id="redirectToDashboard" class="absolute max-sm:right-3 right-0 -top-2 hover:-top-1 transition-all duration-500 cursor-pointer"> <img src="../static/logo/dashboard.png" width="30" height="30" alt="" srcset=""></div>
+    <div id="redirectToDashboard" class="absolute max-sm:right-3 right-0 -top-2 hover:-top-1 transition-all duration-500 cursor-pointer"> <img src="{% static 'logo/dashboard.png' %}" width="30" height="30" alt="" srcset=""></div>
     <div class="grid grid-cols-2  place-items-start w-48">
   
       <div class="bg-green-100 p-4 rounded-full">
-        <img src="../static/logo/balance.svg" alt="icon" width="27" height="27">
+        <img src="{% static 'logo/balance.svg' %}" alt="icon" width="27" height="27">
       </div>
       {% if context %}
       <div class="flex flex-col items-start justify-center">
@@ -40,7 +42,7 @@
     <div class="grid grid-cols-2  place-items-start w-48">
   
       <div class="bg-green-100 p-4 rounded-full">
-        <img src="../static/logo/wallet.svg" alt="icon" width="27" height="27">
+        <img src="{% static 'logo/wallet.svg' %}" alt="icon" width="27" height="27">
       </div>
       {% if context %}
       <div class="flex flex-col items-start justify-center">
@@ -60,7 +62,7 @@
   
     <div class="grid grid-cols-2 place-items-start w-48">
       <div class="bg-green-100 p-4 rounded-full">
-        <img src="../static/logo/laborer.png" alt="icon" width="32" height="32">
+        <img src="{% static 'logo/laborer.png' %}" alt="icon" width="32" height="32">
       </div>
   
       {% if context %}
@@ -111,12 +113,12 @@
 
             <thead">
                 <tr>
-                    <th class="p-3 text-light-gray opacity-50 font-normal relative">Name<button class="absolute"><img src="../static/logo/sort-by.svg" ></button></th>
-                    <th class="p-3 text-light-gray opacity-50 font-normal relative ">Role<button class="absolute"><img src="../static/logo/sort-by.svg" ></button> </th>
+                    <th class="p-3 text-light-gray opacity-50 font-normal relative">Name<button class="absolute"><img src="{% static 'logo/sort-by.svg' %}" ></button></th>
+                    <th class="p-3 text-light-gray opacity-50 font-normal relative ">Role<button class="absolute"><img src="{% static 'logo/sort-by.svg' %}" ></button> </th>
                     <th class="p-3 text-light-gray opacity-50 font-normal ">Date</th>
                     <th class="p-3 text-light-gray opacity-50 font-normal ">Validity</th>
                     <th class="p-3 text-light-gray opacity-50 font-normal ">Payment type</th>
-                    <th class="p-3 text-light-gray opacity-50 font-normal relative ">Paid Birr<button class="absolute"><img src="../static/logo/sort-by.svg" ></button></th>
+                    <th class="p-3 text-light-gray opacity-50 font-normal relative ">Paid Birr<button class="absolute"><img src="{% static 'logo/sort-by.svg' %}" ></button></th>
                     
                 </tr>
             </thead>

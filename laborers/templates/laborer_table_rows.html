@@ -2,7 +2,7 @@
 <tr>
     <td class="p-3 min-w-44">
         <a href="{% url 'delete_laborer' laborer.id %}">
-            <img width="24" height="24" class="inline mr-2" src="../static/logo/delete.png">
+            <img width="24" height="24" class="inline mr-2" src="{% static 'logo/delete.png' %}">
         </a> 
         {{ laborer.name }} 
         <form action="{% url 'amount_to_pay' laborer.id %}" class="inline">

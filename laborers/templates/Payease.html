@@ -1,22 +1,25 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laborer Dashboard</title>
-    <link rel="stylesheet" href="../static/css/output.css">
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
 </head>
 <body class="bg-[#FAFBFF] p-8 max-sm:p-0"> 
 
  
     <div class=" sticky top-0 left-0 mb-2 px-8 sm:px-0 py-2">
-        <img width="150" src="../static/logo/payease-bg-2.png">
+        <img width="150" src="{% static 'logo/payease-bg-2.png' %}">
       </div>
 
    
 <div  class="p-6 mb-32 bg-white shadow-lg rounded-lg relative">
-    <div id="redirectToRegister" class="absolute max-sm:right-12 right-10 -top-4 hover:-top-3 transition-all duration-500 cursor-pointer"> <img src="../static/logo/Add.png" width="30" height="30" alt="" srcset=""></div>
-    <div id="redirectToTransaction" class="absolute max-sm:right-3 right-0 -top-4 hover:-top-3 transition-all duration-500 cursor-pointer"> <img src="../static/logo/transaction.png" width="30" height="30" alt="" srcset=""></div>
+    <div id="redirectToRegister" class="absolute max-sm:right-12 right-10 -top-4 hover:-top-3 transition-all duration-500 cursor-pointer"> <img src="{% static 'logo/Add.png' %}" width="30" height="30" alt="" srcset=""></div>
+    <div id="redirectToTransaction" class="absolute max-sm:right-3 right-0 -top-4 hover:-top-3 transition-all duration-500 cursor-pointer"> <img src="{% static 'logo/transaction.png' %}" width="30" height="30" alt="" srcset=""></div>
 
     <div class="flex justify-between max-sm:flex-col max-sm:justify-start items-center max-sm:items-start gap-10 mb-4">
         <h2 class="text-xl max-md:text-sm font-semibold">Laborers Dashboard</h2>
@@ -58,7 +61,7 @@
                 <tr >
                      <td class="p-3 min-w-28 max-sm:min-w-44 max-sm:pl-0">
                         <div class="flex items-center justify-between gap-1">
-                            <a href="{% url 'delete_laborer' laborer.id %}"><img width="24" height="24"  class="inline mr-2" src="../static/logo/delete.png"></a>{{ laborer.name}} 
+                            <a href="{% url 'delete_laborer' laborer.id %}"><img width="24" height="24"  class="inline mr-2" src="{% static 'logo/delete.png' %}"></a>{{ laborer.name}} 
                         
                         <form action="{% url 'amount_to_pay' laborer.id %}" class="inline"  >
                             {% csrf_token %}
